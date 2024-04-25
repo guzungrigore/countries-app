@@ -1,10 +1,14 @@
 import {Link, useParams} from "react-router-dom";
 import {useCountries} from "../hooks/useCountries.js";
+import {CountryContext} from "../App.jsx";
+import {useContext} from "react";
 
 export const CountryPage = () => {
     const {name} = useParams()
     const {isLoading, countries, errorMessage} = useCountries(`https://restcountries.com/v3.1/name/${name}`)
     const country = countries && countries[0]
+    const {favourite, addFavourite, removeFavourite} = useContext(CountryContext)
+
     return (
         <div>
 
@@ -22,6 +26,13 @@ export const CountryPage = () => {
                                 <polyline points="12 19 5 12 12 5"></polyline>
                             </svg>
                         </Link>
+                        {favourite.some(
+                            (favCountry) => favCountry.name.common === country.name.common
+                        ) ? (
+                            <span className={"btn-favorite"} onClick={() => removeFavourite(country)}>❤️</span>
+                        ) : (
+                            <span className={"btn-favorite"} onClick={() => addFavourite(country)}>🩶</span>
+                        )}
                     </div>
                     <h1 className={"single-country-name"}>{country.name.common}</h1>
                     <div className={"single-country-information"}>
