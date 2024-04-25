@@ -120,3 +120,50 @@ p {
   align-items: end;
   gap: 8px;
 }
+
+button {
+  border-radius: 8px;
+  border: 2px solid var(--color-1);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--background-color);
+  color: var(--color-1);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  color: var(--color);
+  border-color: var(--color);
+}
+
+.search {
+  padding-bottom: 48px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.input {
+  border: 2px solid var(--color-1);
+  border-radius: 8px;
+  background-color: var(--background-color);
+  padding: 10px;
+  font-size: 16px;
+
+  &::placeholder {
+    color: var(--color);
+  }
+}
+
+.searched-country {
+  border-bottom: 1px solid #35966f;
+  padding: 24px;
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  place-items: center;
+  margin-bottom: 48px;
+}
