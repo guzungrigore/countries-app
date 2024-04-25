@@ -108,8 +108,8 @@ function App() {
                     </div>
                 </div>
                 <Routes>
-                    <Route path={"/"} element={<CountriesPage/>}/>
-                    <Route path={"/country/:name"} element={<CountryPage/>}/>
+                    <Route path={"/countriesapp/"} element={<CountriesPage/>}/>
+                    <Route path={"countriesapp/country/:name"} element={<CountryPage/>}/>
                 </Routes>
             </CountryContext.Provider>
         </div>

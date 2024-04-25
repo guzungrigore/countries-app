@@ -45,11 +45,11 @@ export const SearchCountries = () => {
             <div>{errorMessage && <p>{errorMessage}</p>}</div>
             {country &&
                 <div className={"searched-country"}>
-                    <Link to={`/country/${country.name.common}`}>
+                    <Link to={`/countriesapp/country/${country.name.common}`}>
                         <img className={"searched-country-img"} src={country.flags.png}/>
                     </Link>
                     <div className={"fav"}>
-                        <Link to={`/country/${country.name.common}`}>
+                        <Link to={`/countriesapp/country/${country.name.common}`}>
                             <h2 className={"searched-country-name"}>{country.name.common}</h2>
                         </Link>
                     </div>
