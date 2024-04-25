@@ -3,7 +3,7 @@ import {CountryContext} from "../App.jsx";
 import {Country} from "./Country.jsx";
 
 export const Countries = () => {
-    const { countries, errorMessage} = useContext(CountryContext)
+    const { countries, errorMessage} = useContext(CountryContext);
     return (
         <div>
             <div>{errorMessage && <p>{errorMessage}</p>}</div>
