@@ -63,3 +63,60 @@ p {
   height: 100%;
   object-fit: cover;
 }
+
+.single-country {
+  padding: 0 96px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  place-items: center;
+}
+
+.single-country-name {
+  margin: 0;
+  grid-column: 1/3;
+}
+
+.single-country-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: start;
+}
+
+.single-country-info-last {
+  grid-column: 1/3;
+}
+
+.icon {
+  stroke: var(--color-1);
+  width: 32px;
+  height: 32px;
+
+  &:hover {
+    stroke: var(--color-2);
+  }
+}
+
+.back {
+  display: flex;
+  justify-self: end;
+}
+
+.single-country-nav {
+  display: flex;
+  justify-self: center;
+  align-items: end;
+  gap: 24px;
+  grid-column: 1/3;
+}
+
+.settings {
+  position: absolute;
+  top: 8px;
+  left: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 8px;
+}
