@@ -1,5 +1,5 @@
-import React, {useContext} from 'react';
-import {CountryContext} from "../App.jsx";
+import {useContext} from 'react';
+import {CountryContext} from "./context/countryContextComp.jsx";
 
 const HeartIcon = () => {
     const {addFavorite} = useContext(CountryContext);

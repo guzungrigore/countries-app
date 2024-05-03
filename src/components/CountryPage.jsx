@@ -1,7 +1,7 @@
 import {Link, useParams} from "react-router-dom";
 import {useCountries} from "../hooks/useCountries.js";
-import {CountryContext} from "../App.jsx";
 import {useContext} from "react";
+import {CountryContext} from "./context/countryContextComp.jsx";
 
 export const CountryPage = () => {
     const {name} = useParams()

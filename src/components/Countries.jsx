@@ -1,6 +1,6 @@
 import {useContext} from "react";
-import {CountryContext} from "../App.jsx";
 import {Country} from "./Country.jsx";
+import {CountryContext} from "./context/countryContextComp.jsx";
 
 export const Countries = () => {
     const { countries, errorMessage} = useContext(CountryContext);

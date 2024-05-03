@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
-import {CountryContext} from "../App.jsx";
 import {useContext} from "react";
+import {CountryContext} from "./context/countryContextComp.jsx";
 
 export const Country = ({country}) => {
     const {favourite, addFavourite, removeFavourite} = useContext(CountryContext);
