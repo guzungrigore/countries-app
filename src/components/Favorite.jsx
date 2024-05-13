@@ -9,13 +9,13 @@ export const Favorite = ({setShow}) => {
             <h2 className={"favourite-name"}>Favorite</h2>
             <div className={"favourite"}>
                 {favourite.map(country => (
-                    <div className={"country"} key={country.flag}>
-                        <Link to={`/country/${country.name.common}`} onClick={() => setShow(false)}>
-                            <img className={"img"} src={country.flags.png}/>
+                    <div className={"country"} key={country.id}>
+                        <Link to={`/country/${country.id}`} onClick={() => setShow(false)}>
+                            <img className={"img"} src={country.image}/>
                         </Link>
                         <div className={"fav"}>
-                            <Link to={`/country/${country.name.common}`}  onClick={() => setShow(false)}>
-                                <p>{country.name.common}</p>
+                            <Link to={`/country/${country.id}`}  onClick={() => setShow(false)}>
+                                <p>{country.name}</p>
                             </Link>
                             <span className={"btn-favorite"} onClick={() => removeFavourite(country)}><span className={"btn-favorite"} onClick={() => removeFavourite(country)}><svg className={"feather" +
                                 " feather-heart icon-1"}

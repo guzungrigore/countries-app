@@ -5,16 +5,16 @@ import {CountryContext} from "./context/countryContextComp.jsx";
 export const Country = ({country}) => {
     const {favourite, addFavourite, removeFavourite} = useContext(CountryContext);
     return (
-        <div className={"country"} key={country.flag}>
-            <Link to={`/countriesapp/country/${country.name.common}`}>
-                <img className={"img"} src={country.flags.png}/>
+        <div className={"country"} key={country.id}>
+            <Link to={`/countriesapp/country/${country.id}`}>
+                <img className={"img"} src={country.image} align={country.name}/>
             </Link>
             <div className={"fav"}>
-                <Link to={`/countriesapp/country/${country.name.common}`}>
-                    <p>{country.name.common}</p>
+                <Link to={`/countriesapp/country/${country.id}`}>
+                    <p>{country.name}</p>
                 </Link>
             {favourite.some(
-                (favCountry) => favCountry.name.common === country.name.common
+                (favCountry) => favCountry.name === country.name
             ) ? (
                 <span className={"btn-favorite"} onClick={() => removeFavourite(country)}><svg className={"feather" +
                     " feather-heart icon-1"}
